@@ -8,16 +8,23 @@ ext {
     'glfw/include'
   ]
 
-  lib_link = 'static'
+  // compiler_defines += ['_GLFW_BUILD_DLL']
 
   srcIncludeFiles = [
     "context.c",
     "init.c",
     "input.c",
     "monitor.c",
+    "platform.c",
     "vulkan.c",
     "window.c",
-    "platform.c"
+    "egl_context.c",
+    "osmesa_context.c",
+
+    "null_init.c",
+    "null_monitor.c",
+    "null_window.c",
+    "null_joystick.c",
   ]
 
   if (isUNIX) {
@@ -28,13 +35,14 @@ ext {
       "xkb_unicode.c",
       "posix_time.c",
       "posix_thread.c",
+      "posix_module.c",
       "glx_context.c",
       "egl_context.c",
       "osmesa_context.c",
       "linux_joystick.c"
     ]
 
-    compiler_defines = [
+    compiler_defines += [
       "_GLFW_X11"
     ]
   }
@@ -52,7 +60,7 @@ ext {
       "osmesa_context.c"
     ]
 
-    compiler_defines = [
+    compiler_defines += [
       "_GLFW_WIN32",
 			"_CRT_SECURE_NO_WARNINGS"
     ]

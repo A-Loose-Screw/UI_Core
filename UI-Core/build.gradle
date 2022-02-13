@@ -3,7 +3,7 @@ apply from: project.file("${projectRoot}/shared/ext.gradle")
 ext {
   nativeName = "UI-Core"
   binarySpec = NativeExecutableSpec
-  req_proj_libs = ['GLFW', 'GLAD']
+  req_proj_libs = ['GLFW', 'GLAD', 'IMGUI']
 }
 
 apply from: project.file("${projectRoot}/shared/cppBuild.gradle")

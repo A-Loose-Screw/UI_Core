@@ -1,7 +1,7 @@
 apply from: project.file("${projectRoot}/shared/ext.gradle")
 
 ext {
-  nativeName = "Imgui"
+  nativeName = "IMGUI"
   binarySpec = NativeLibrarySpec
   req_proj_libs = []
 
@@ -20,6 +20,7 @@ ext {
     "imstb_rectpack.h",
     "imstb_textedit.h",
     "imstb_truetype.h",
+    "backends/imgui_impl_opengl3.cpp"
   ]
 }
 
