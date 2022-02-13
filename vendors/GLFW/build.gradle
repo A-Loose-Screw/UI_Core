@@ -1,0 +1,59 @@
+apply from: project.file("${projectRoot}/shared/ext.gradle")
+
+ext {
+  nativeName = "GLFW"
+
+  srcLoc = 'glfw/src'
+  headersLoc = 'glfw/include'
+
+  lib_link = 'static'
+
+  srcIncludeFiles = [
+    "context.c",
+    "init.c",
+    "input.c",
+    "monitor.c",
+    "vulkan.c",
+    "window.c"
+  ]
+
+  if (isUNIX) {
+    srcIncludeFiles += [
+      "x11_init.c",
+      "x11_monitor.c",
+      "x11_window.c",
+      "xkb_unicode.c",
+      "posix_time.c",
+      "posix_thread.c",
+      "glx_context.c",
+      "egl_context.c",
+      "osmesa_context.c",
+      "linux_joystick.c"
+    ]
+
+    compiler_defines += [
+      '_GLFW_X11'
+    ]
+  }
+
+  if (isWINDOWS) {
+    srcIncludeFiles += [
+      "win32_init.c",
+      "win32_joystick.c",
+      "win32_monitor.c",
+      "win32_time.c",
+      "win32_thread.c",
+      "win32_window.c",
+      "wgl_context.c",
+      "egl_context.c",
+      "osmesa_context.c"
+    ]
+
+    compiler_defines += [
+      '_GLFW_WIN32'
+    ]
+  }
+
+}
+
+apply from: project.file("${projectRoot}/shared/cBuild.gradle")

@@ -1,0 +1,7 @@
+apply from: project.file("${projectRoot}/shared/ext.gradle")
+
+ext {
+  nativeName = "UI-Core"
+}
+
+apply from: project.file("${projectRoot}/shared/cppBuild.gradle")

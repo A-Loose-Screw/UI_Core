@@ -1,0 +1,2 @@
+project.ext.set('projectRoot', "${projectDir}/..")
+apply from: project.file("$projectRoot/shared/cppBuild.gradle")

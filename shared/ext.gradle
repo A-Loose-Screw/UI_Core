@@ -1,0 +1,15 @@
+ext {
+  binarySpec = NativeLibrarySpec
+
+  req_proj_libs = []
+  req_libs = []
+
+  compiler_defines = []
+
+  lib_link = 'shared'
+
+  srcLoc = 'src/cpp'
+  srcIncludeFiles = ['**/*.cpp', '**/*.cc']
+
+  headersLoc = 'src/include'
+}

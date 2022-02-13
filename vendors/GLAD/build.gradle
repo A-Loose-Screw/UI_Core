@@ -1,0 +1,11 @@
+apply from: project.file("${projectRoot}/shared/ext.gradle")
+
+ext {
+  nativeName = "GLAD"
+
+  srcLoc = 'glad/src'
+  srcIncludeFiles = ['**/*.c']
+  headersLoc = ['glad/include']
+}
+
+apply from: project.file("${projectRoot}/shared/cBuild.gradle")

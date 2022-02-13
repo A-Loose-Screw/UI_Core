@@ -1,0 +1,42 @@
+apply plugin: 'c'
+
+
+model {
+  components {
+    "${nativeName}"(binarySpec) {
+      sources {
+        c {
+          source {
+            srcDir srcLoc
+            include srcIncludeFiles
+          }
+
+          exportedHeaders {
+            srcDir headersLoc
+          }
+        }
+      }
+
+      binaries.all {
+        if (req_proj_libs.size() >= 1) {
+          req_proj_libs.each { req_lib ->
+            lib project: ":${req_lib}", library: "${req_lib}", linkage: "${lib_link}"
+          }
+        }
+
+        if (req_libs.size() >= 1) {
+          req_libs.each { req_lib ->
+            lib library: "${req_lib}"
+          }
+        }
+
+        if (compiler_defines.size() >= 1) {
+          compiler_defines.each { compiler_define ->
+            println "Adding: " + compiler_define
+            cppCompiler.define "${compiler_define}"
+          }
+        }
+      }
+    }
+  }
+}
