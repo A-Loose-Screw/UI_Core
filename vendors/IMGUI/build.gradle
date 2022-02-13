@@ -9,7 +9,7 @@ ext {
   headersLoc = ['imgui', 'imgui/backends']
 
   srcIncludeFiles = [
-		"imconfig.h",
+    "imconfig.h",
     "imgui_demo.cpp",
     "imgui_draw.cpp",
     "imgui_internal.h",
