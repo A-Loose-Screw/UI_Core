@@ -11,6 +11,8 @@ rootProject.name = 'UI_Core'
 include('UI-Core')
 include('GLFW')
 include('GLAD')
+include('IMGUI')
 
 project(':GLFW').projectDir = file("vendors/GLFW")
 project(':GLAD').projectDir = file("vendors/GLAD")
+project(':IMGUI').projectDir = file("vendors/IMGUI")

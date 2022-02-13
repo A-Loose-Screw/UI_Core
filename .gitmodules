@@ -1,3 +1,9 @@
 [submodule "vendors/GLFW/glfw"]
-	path = vendors/GLFW/glfw
-	url = https://github.com/glfw/glfw.git
+  path = vendors/GLFW/glfw
+  url = https://github.com/glfw/glfw.git
+
+[submodule "vendors/IMGUI/imgui"]
+  path = vendors/IMGUI/imgui
+  branch = master
+  url = https://github.com/ocornut/imgui.git
+

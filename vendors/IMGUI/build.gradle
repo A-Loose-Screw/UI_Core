@@ -1,0 +1,26 @@
+apply from: project.file("${projectRoot}/shared/ext.gradle")
+
+ext {
+  nativeName = "Imgui"
+  binarySpec = NativeLibrarySpec
+  req_proj_libs = []
+
+  srcLoc = 'imgui'
+  headersLoc = ['imgui', 'imgui/backends']
+
+  srcIncludeFiles = [
+		"imconfig.h",
+    "imgui_demo.cpp",
+    "imgui_draw.cpp",
+    "imgui_internal.h",
+    "imgui_tables.cpp",
+    "imgui_widgets.cpp",
+    "imgui.cpp",
+    "imgui.h",
+    "imstb_rectpack.h",
+    "imstb_textedit.h",
+    "imstb_truetype.h",
+  ]
+}
+
+apply from: project.file("${projectRoot}/shared/cppBuild.gradle")
