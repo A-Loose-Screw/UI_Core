@@ -4,7 +4,9 @@ ext {
   nativeName = "GLFW"
 
   srcLoc = 'glfw/src'
-  headersLoc = 'glfw/include'
+  headersLoc = [
+    'glfw/include'
+  ]
 
   lib_link = 'static'
 
@@ -14,7 +16,8 @@ ext {
     "input.c",
     "monitor.c",
     "vulkan.c",
-    "window.c"
+    "window.c",
+    "platform.c"
   ]
 
   if (isUNIX) {
@@ -31,8 +34,8 @@ ext {
       "linux_joystick.c"
     ]
 
-    compiler_defines += [
-      '_GLFW_X11'
+    compiler_defines = [
+      "_GLFW_X11"
     ]
   }
 
@@ -49,10 +52,14 @@ ext {
       "osmesa_context.c"
     ]
 
-    compiler_defines += [
-      '_GLFW_WIN32'
+    compiler_defines = [
+      "_GLFW_X11",
+      "_GLFW_GLX",
+      "_GLFW_USE_OPENGL"
     ]
   }
+
+  linker_args = []
 
 }
 

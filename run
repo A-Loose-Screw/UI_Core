@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./UI-Core/build/exe/uI-Core/UI-Core

@@ -32,8 +32,13 @@ model {
 
         if (compiler_defines.size() >= 1) {
           compiler_defines.each { compiler_define ->
-            println "Adding: " + compiler_define
-            cppCompiler.define "${compiler_define}"
+            cCompiler.define "${compiler_define}"
+          }
+        }
+
+        if (linker_args.size() >= 1) {
+          linker_args.each { linker_arg ->
+            linker.args linker_arg
           }
         }
       }

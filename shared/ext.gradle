@@ -5,6 +5,7 @@ ext {
   req_libs = []
 
   compiler_defines = []
+  linker_args = []
 
   lib_link = 'shared'
 
