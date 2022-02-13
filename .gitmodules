@@ -4,6 +4,6 @@
 
 [submodule "vendors/IMGUI/imgui"]
   path = vendors/IMGUI/imgui
-  branch = master
+  branch = docking
   url = https://github.com/ocornut/imgui.git
 

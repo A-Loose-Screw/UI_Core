@@ -53,9 +53,8 @@ ext {
     ]
 
     compiler_defines = [
-      "_GLFW_X11",
-      "_GLFW_GLX",
-      "_GLFW_USE_OPENGL"
+      "_GLFW_WIN32",
+			"_CRT_SECURE_NO_WARNINGS"
     ]
   }
 
