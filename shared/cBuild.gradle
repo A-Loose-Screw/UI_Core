@@ -2,8 +2,19 @@ apply plugin: 'c'
 
 
 model {
+  platforms {
+    x86 {
+      architecture "x86"
+    }
+
+    x64 {
+      architecture "x86_64"
+    }
+  }
+
   components {
     "${nativeName}"(binarySpec) {
+      targetPlatform "x64"
       sources {
         c {
           source {
@@ -43,9 +54,9 @@ model {
         }
       }
 
-      binaries.withType(SharedLibraryBinarySpec) { binary ->
-        buildable = false
-      }
+      // binaries.withType(SharedLibraryBinarySpec) { binary ->
+      //   buildable = false
+      // }
     }
   }
 }
