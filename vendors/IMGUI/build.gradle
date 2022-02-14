@@ -6,7 +6,7 @@ ext {
   req_proj_libs = []
 
   srcLoc = 'imgui'
-  headersLoc = ['imgui', 'imgui/backends']
+  headersLoc = 'imgui'
 
   srcIncludeFiles = [
     "imconfig.h",
@@ -20,7 +20,6 @@ ext {
     "imstb_rectpack.h",
     "imstb_textedit.h",
     "imstb_truetype.h",
-    "backends/imgui_impl_opengl3.cpp"
   ]
 }
 
