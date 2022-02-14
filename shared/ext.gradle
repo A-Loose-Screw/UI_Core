@@ -7,7 +7,7 @@ ext {
   compiler_defines = []
   linker_args = []
 
-  lib_link = 'shared'
+  lib_link = 'static'
 
   srcLoc = 'src/cpp'
   srcIncludeFiles = ['**/*.cpp', '**/*.cc']

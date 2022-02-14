@@ -8,8 +8,6 @@ ext {
     'glfw/include'
   ]
 
-  // compiler_defines += ['_GLFW_BUILD_DLL']
-
   srcIncludeFiles = [
     "context.c",
     "init.c",
@@ -62,6 +60,7 @@ ext {
 
     compiler_defines += [
       "_GLFW_WIN32",
+      "_GLFW_BUILD_DLL",
       "_CRT_SECURE_NO_WARNINGS"
     ]
   }
