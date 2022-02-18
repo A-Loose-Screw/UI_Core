@@ -70,7 +70,9 @@ ext {
     ]
   }
 
-  linker_args = []
+  linker_args = [
+    '-lopengl32'
+  ]
 
 }
 

@@ -5,6 +5,11 @@ ext {
   binarySpec = NativeExecutableSpec
   req_proj_libs = ['GLFW', 'GLAD', 'IMGUI']
   linkage = 'shared'
+
+  linker_args = [
+    '-lopengl32'
+  ]
+
 }
 
 apply from: project.file("${projectRoot}/shared/cppBuild.gradle")
