@@ -37,7 +37,7 @@ model {
 
         if (req_libs.size() >= 1) {
           req_libs.each { req_lib ->
-            lib library: "${req_lib}"
+            lib library: "${req_lib}", linkage: "${lib_link}"
           }
         }
 

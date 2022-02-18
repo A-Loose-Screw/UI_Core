@@ -4,6 +4,7 @@ ext {
   nativeName = "UI-Core"
   binarySpec = NativeExecutableSpec
   req_proj_libs = ['GLFW', 'GLAD', 'IMGUI']
+  linkage = 'shared'
 }
 
 apply from: project.file("${projectRoot}/shared/cppBuild.gradle")

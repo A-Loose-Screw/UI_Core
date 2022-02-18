@@ -45,6 +45,12 @@ model {
             cppCompiler.define "${compiler_define}"
           }
         }
+
+        if (linker_args.size() >= 1) {
+          linker_args.each { linker_arg ->
+            linker.args linker_arg
+          }
+        }
       }
 
       // binaries.withType(SharedLibraryBinarySpec) { binary ->

@@ -4,7 +4,7 @@ ext {
   nativeName = "GLAD"
 
   srcLoc = 'glad/src'
-  srcIncludeFiles = ['**/*.c']
+  srcIncludeFiles = ['*.c']
   headersLoc = ['glad/include']
 }
 
