@@ -2,6 +2,8 @@
   "files.associations": {
     "internal.h": "c",
     "glfw3.h": "c",
-    "platform.h": "c"
+    "platform.h": "c",
+    "iosfwd": "cpp",
+    "functional": "cpp"
   }
 }

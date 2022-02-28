@@ -68,11 +68,12 @@ ext {
       "_GLFW_BUILD_DLL",
       "_CRT_SECURE_NO_WARNINGS",
     ]
+    
+    linker_args = [
+      '-lopengl32'
+    ]
   }
 
-  linker_args = [
-    '-lopengl32'
-  ]
 
 }
 

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+valgrind ./UI-Core/build/exe/uI-Core/UI-Core
