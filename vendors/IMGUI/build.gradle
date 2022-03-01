@@ -1,4 +1,4 @@
-apply from: project.file("${projectRoot}/shared/ext.gradle")
+apply from: project.file("$projectDir/../../shared/ext.gradle")
 
 ext {
   nativeName = "IMGUI"
@@ -23,4 +23,4 @@ ext {
   ]
 }
 
-apply from: project.file("${projectRoot}/shared/cppBuild.gradle")
+apply from: project.file("$projectDir/../../shared/cppBuild.gradle")

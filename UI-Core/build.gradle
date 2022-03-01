@@ -1,10 +1,10 @@
-apply from: project.file("${projectRoot}/shared/ext.gradle")
+apply from: project.file("$projectDir/../shared/ext.gradle")
 
 ext {
   nativeName = "UI-Core"
-  binarySpec = NativeExecutableSpec
+  binarySpec = NativeLibrarySpec
   req_proj_libs = ['GLFW', 'GLAD', 'IMGUI']
-  linkage = 'shared'
+  linkage = 'static'
 }
 
-apply from: project.file("${projectRoot}/shared/cppBuild.gradle")
+apply from: project.file("$projectDir/../shared/cppBuild.gradle")

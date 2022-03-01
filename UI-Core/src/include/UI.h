@@ -17,6 +17,8 @@
 // Input
 #include "Core/Input/Input.h"
 
+#include "implementations/imgui_impl.h"
+
 class UI : Input {
  public:
   UI(const std::string &name = "UI-Core", int width = 1280, int height = 720) : _name(name) {

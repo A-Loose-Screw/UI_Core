@@ -1,9 +1,7 @@
-apply from: project.file("${projectRoot}/shared/ext.gradle")
+apply from: project.file("$projectDir/../../shared/ext.gradle")
 
 ext {
   nativeName = "GLFW"
-
-  lib_link = 'static'
 
   req_proj_libs = ['GLAD']
 
@@ -77,4 +75,4 @@ ext {
 
 }
 
-apply from: project.file("${projectRoot}/shared/cBuild.gradle")
+apply from: project.file("$projectDir/../../shared/cBuild.gradle")

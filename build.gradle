@@ -4,8 +4,6 @@ plugins {
   id "cpp"
 }
 
-project.ext.set('projectRoot', "${projectDir}")
-
 [FAMILY_WINDOWS, FAMILY_UNIX, FAMILY_MAC].each { osName ->
   // Create Task
   if (!project.tasks.findByName("$osName")) {
